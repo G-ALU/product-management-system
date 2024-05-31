@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main"> 
+        <div class="container">
+        <div class="attraction">
+            <div class="welcomemesso">
+                <p class="jumuia">JUMUIA <ion-icon name="filter-circle" style="color: white; height: 20px;"></ion-icon></p>
+                <p class="jumuia">Jumuia Kenya - Unveiling Our Leading E-Commerce Website</p>
+            </div>
+            <div class="products">
+                <div class="introimage"><img src="/images/ecommerce image.jpeg" alt="" style="width: 25vw;"></div>
+                <div class="inputfield">
+                    <form action="" class="form1">
+                        <label for="text1">Product</label>
+                        <input type="text" id="text1" placeholder="Input Product Name" required><br><br>
+                        <label for="dropdown">Category</label>
+                        <select name="dropdown" id="dropdown">
+                            <option value="0">Choose product category...</option>
+                            <option value="game-controller">Electronics</option>
+                            <option value="bed-outline">Furniture</option>
+                            <option value="beer-outline">Beer</option>
+                            <option value="wine-outline">Wines</option>
+                            <option value="footsteps-outline">Footwear</option>
+                            <option value="logo-bitcoin">Oil</option>
+                            <option value="alarm-outline">Clock</option>
+                        </select><br><br>
+                        <label for="image-url">Image URL</label>
+                        <input type="text" id="image-url" placeholder="Input Image URL" required><br><br>
+                        <button id="mySubmit">Add Item</button>
+                    </form>
+                    
+                </div> 
+                <div class="inputfield2">
+                    <form id="update-form" style="display:none;">
+                        <label for="update-text">Update</label>
+                        <input type="text" id="update-text" placeholder="Update Product" required><br><br>
+                        <label for="update-dropdown">Category</label>
+                        <select name="update-dropdown" id="update-dropdown">
+                            <option value="0">pick updated product category...</option>
+                            <option value="game-controller">Electronics</option>
+                            <option value="bed-outline">Furniture</option>
+                            <option value="beer-outline">Beer</option>
+                            <option value="wine-outline">Wines</option>
+                            <option value="footsteps-outline">Footwear</option>
+                            <option value="logo-bitcoin">Oil</option>
+                            <option value="alarm-outline">Clock</option>
+                        </select><br><br>
+                        <label for="update-image">Image URL</label>
+                        <input type="text" id="update-image" placeholder="Update Image URL" required><br><br>
+                        <button id="update-submit">Submit Update</button>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="actinglike"> 
+            <h3>AVAILABLE PRODUCTS</h3>
+        </div>
+        <div class="viewproducts">
+            <button id="viewOne" class="viewproducts1">View One Product</button>
+            <button id="viewAll" class="viewproducts1">View All Products</button>
+        </div>
+        <div class="activities">
+
+        </div>
+        </div>
+    </div>
+    <script src="/dist/eco.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+
+
+
