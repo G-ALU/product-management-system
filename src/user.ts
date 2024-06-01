@@ -36,15 +36,19 @@ function displayProducts(products: Product[]) {
         `;
         activities.appendChild(productItem);
 
-       
         const addToCartButton = productItem.querySelector(`#add-to-cart-${product.id}`) as HTMLElement;
         addToCartButton.addEventListener('click', () => addToCart(product));
     });
 }
 
-function addToCart(product: Product) {
-    const cart = getCartItems();
-    cart.push(product);
+function addToCart(product: Product): void {
+    let cart: Product[] = JSON.parse(localStorage.getItem('cart') || '[]');
+    cart.push({
+        name: product.name,
+        price: product.price,
+        description: product.description,
+        imageUrl: product.imageUrl 
+    });
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(`${product.name} has been added to the cart!`);
 }
@@ -60,6 +64,6 @@ async function init() {
     displayProducts(products);
 }
 
-
 init();
+
 

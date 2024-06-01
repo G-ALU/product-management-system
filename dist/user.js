@@ -43,8 +43,13 @@ function displayProducts(products) {
     });
 }
 function addToCart(product) {
-    const cart = getCartItems();
-    cart.push(product);
+    let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    cart.push({
+        name: product.name,
+        price: product.price,
+        description: product.description,
+        imageUrl: product.imageUrl
+    });
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(`${product.name} has been added to the cart!`);
 }

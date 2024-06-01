@@ -1,45 +1,24 @@
 {
   "products": [
     {
-      "id": "a056",
       "name": "Furniture",
-      "price": 50999,
-      "description": "good and cool",
-      "imageUrl": "https://images.pexels.com/photos/880876/pexels-photo-880876.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    },
-    {
-      "name": "Footwear",
-      "price": 6700,
-      "description": "not bad",
+      "price": 20000,
+      "description": "Comfy as usual",
       "imageUrl": "https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "id": "8009"
+      "id": "a056"
     },
     {
-      "id": "aa06",
-      "name": "Eating",
-      "price": 4500,
-      "description": "not good",
-      "imageUrl": "https://images.pexels.com/photos/880876/pexels-photo-880876.jpeg?auto=compress&cs=tinysrgb&w=600"
-    },
-    {
-      "id": "3016",
-      "name": "Beer",
-      "price": 5000,
-      "description": "Cool breeze",
-      "imageUrl": "https://images.pexels.com/photos/880876/pexels-photo-880876.jpeg?auto=compress&cs=tinysrgb&w=600"
-    },
-    {
-      "id": "1efd",
       "name": "Phone",
-      "price": 13000,
-      "description": "Hard",
-      "imageUrl": "https://images.pexels.com/photos/609771/pexels-photo-609771.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      "price": 15000,
+      "description": "Smart as it is",
+      "imageUrl": "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "id": "1efd"
     },
     {
-      "id": "8ea6",
-      "name": "phone ",
-      "price": 45678,
-      "description": "Awesomeeeee",
+      "id": "5625",
+      "name": "Funiture",
+      "price": 30000,
+      "description": "Comfy as usual",
       "imageUrl": "https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     }
   ]

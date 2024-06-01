@@ -10,21 +10,19 @@
     <div class="main3">
         <div class="jumuiatop">
             <p class="jumuiapay">JUMUIA PAY</p>
-            <ion-icon name="filter-circle" style="color: orange; height: 20px;"></ion-icon></p>
+            <ion-icon name="filter-circle" style="color: orange; height: 20px;"></ion-icon>
         </div>
         <div class="jumuiahelp">
-            <P style="font-size: 30px; margin-left: 100px;"><b>JUMUIA</b></P>
-            <ion-icon name="filter-circle" style="color: orange; width: 50px; height: 40px;"></ion-icon></p>
+            <p style="font-size: 30px; margin-left: 100px;"><b>JUMUIA</b></p>
+            <ion-icon name="filter-circle" style="color: orange; width: 50px; height: 40px;"></ion-icon>
             <div class="track"><a href="contact.html" class="button1">Track order</a></div>
         </div>
         <div class="businessarea">
             <div class="cartarea">
-                <div class="cart1"><p>cart </p></div>
-                <div class="cart2" id="cart-items">
-                   
-                </div>
+                <div class="cart1"><p>Cart</p></div>
+                <div class="cart2" id="cart-items"></div>
                 <div class="cart3">
-                    <button id="clear-cart"><ion-icon name="trash" style="color: orange; height: 40px; width: 40px; "></ion-icon><br> <p style="font-size: 10px;">REMOVE</p></button>
+                    <button id="clear-cart"><ion-icon name="trash" style="color: orange; height: 40px; width: 40px;"></ion-icon><br> <p style="font-size: 10px;">REMOVE</p></button>
                 </div>
             </div>
             <div class="checkoutarea">
@@ -32,7 +30,7 @@
                     <p>Cart Summary</p>
                 </div>
                 <div class="subtotal">
-                    <P>Total</P>
+                    <p>Total</p>
                     <p id="subtotal">ksh. 0</p>
                 </div>
                 <div class="checkout1">
@@ -59,8 +57,10 @@
                 const itemElement = document.createElement('div');
                 itemElement.classList.add('cart-item');
                 itemElement.innerHTML = `
-                    <p><strong>Name:</strong> ${item.name}</p>
-                    <p><strong>Price:</strong> $${item.price.toFixed(2)}</p>
+                    <img src="${item.image}" alt="${item.name}">
+                    <p><strong>${item.name}</strong></p>
+                    <p>${item.description}</p>
+                    <p>Price: $${item.price.toFixed(2)}</p>
                 `;
                 cartItemsContainer.appendChild(itemElement);
                 subtotal += item.price;
@@ -80,3 +80,5 @@
     </script>
 </body>
 </html>
+
+
