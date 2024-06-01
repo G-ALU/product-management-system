@@ -1,0 +1,92 @@
+.jumuiatop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(231, 227, 227);
+    height: 8vh;
+}
+.jumuiapay{
+    font-weight: 300;
+}
+.jumuiahelp{
+    display: flex;
+  align-items: center;
+    height: 20vh;
+    background-color: white;
+}
+.jumuiahelp .button1 {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: orangered;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.track{
+    margin-left: 1000px;
+}
+
+.jumuiahelp .button1:hover {
+    background-color: darkred;
+}
+.main3{
+    background-color:  rgb(231, 227, 227);
+    padding: 20px;
+}
+.businessarea{
+    display: flex;
+}
+.cartarea{
+    display: flex;
+    flex-direction: column;
+    height:40vh;
+    width:60vw;
+    margin-top: 20px;
+    margin-left: 30px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.cart1{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+
+}
+.cart2{
+    display: flex;
+    height:28vh;
+}
+.checkoutarea{
+    background-color: white;
+    height:20vh;
+    width:25vw;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.checkoutcartsummary{
+    
+    font-size: 20px;
+}
+.subtotal{
+    display: flex;
+    gap: 150px;
+    font-size: 20px;
+}
+.checkout1{
+    background-color: orangered;
+}
+.checkout{
+    width: 100%;
+    padding: 5px;
+    background-color: orange;
+    color: white;
+    
+}
+.checkout:hover{
+    background-color:rgb(240, 176, 57);
+    color: ghostwhite;
+}

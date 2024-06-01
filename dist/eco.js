@@ -8,7 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var _a, _b, _c, _d;
+var _a, _b, _c;
 function fetchProducts() {
     return __awaiter(this, void 0, void 0, function* () {
         const response = yield fetch("http://localhost:3000/products");
@@ -29,9 +29,11 @@ function displayProducts(products) {
         productItem.classList.add('activities1');
         productItem.innerHTML = `
             <img src="${product.imageUrl}" alt="${product.name}">
-            <p>${product.name}</p><br>
+            <p><strong>Name:</strong> ${product.name}</p>
+            <p><strong>Price:</strong> $${product.price.toFixed(2)}</p>
+            <p><strong>Description:</strong> ${product.description}</p><br>
             <button class="update1" id="update111" data-id="${product.id}" data-action="update">Update</button><br>
-            <button class="update1" id= "delete111" data-id="${product.id}" data-action="delete">Delete </button>
+            <button class="update1" id="delete111" data-id="${product.id}" data-action="delete">Delete</button>
         `;
         activities.appendChild(productItem);
     });
@@ -68,11 +70,13 @@ function showUpdateForm(productId) {
 function updateProduct(productId) {
     return __awaiter(this, void 0, void 0, function* () {
         const productInput = document.getElementById('update-text');
-        const categoryInput = document.getElementById('update-dropdown');
+        const priceInput = document.getElementById('update-price');
+        const descriptionInput = document.getElementById('update-description');
         const imageInput = document.getElementById('update-image');
         const updatedProduct = {
             name: productInput.value,
-            category: categoryInput.value,
+            price: parseFloat(priceInput.value),
+            description: descriptionInput.value,
             imageUrl: imageInput.value
         };
         yield fetch(`http://localhost:3000/products/${productId}`, {
@@ -95,11 +99,13 @@ function handleSubmit(event) {
     return __awaiter(this, void 0, void 0, function* () {
         event.preventDefault();
         const productInput = document.getElementById('text1');
-        const categoryInput = document.getElementById('dropdown');
+        const priceInput = document.getElementById('price');
+        const descriptionInput = document.getElementById('description');
         const imageInput = document.getElementById('image-url');
         const newProduct = {
             name: productInput.value,
-            category: categoryInput.value,
+            price: parseFloat(priceInput.value),
+            description: descriptionInput.value,
             imageUrl: imageInput.value,
         };
         yield fetch("http://localhost:3000/products", {
@@ -114,11 +120,10 @@ function handleSubmit(event) {
     });
 }
 (_a = document.getElementById('mySubmit')) === null || _a === void 0 ? void 0 : _a.addEventListener('click', handleSubmit);
-(_b = document.getElementById('mySubmit')) === null || _b === void 0 ? void 0 : _b.addEventListener('click', handleSubmit);
-(_c = document.getElementById('viewOne')) === null || _c === void 0 ? void 0 : _c.addEventListener('click', () => __awaiter(void 0, void 0, void 0, function* () {
+(_b = document.getElementById('viewOne')) === null || _b === void 0 ? void 0 : _b.addEventListener('click', () => __awaiter(void 0, void 0, void 0, function* () {
     const criteria = prompt("Enter the product name:");
     const products = yield fetchProducts();
-    const filteredProducts = products.filter(product => product.name.includes(criteria) || product.category.includes(criteria));
+    const filteredProducts = products.filter(product => product.name.includes(criteria));
     if (filteredProducts.length > 0) {
         displayProducts([filteredProducts[0]]);
     }
@@ -126,7 +131,7 @@ function handleSubmit(event) {
         alert('No product found with the given criteria.');
     }
 }));
-(_d = document.getElementById('viewAll')) === null || _d === void 0 ? void 0 : _d.addEventListener('click', () => __awaiter(void 0, void 0, void 0, function* () {
+(_c = document.getElementById('viewAll')) === null || _c === void 0 ? void 0 : _c.addEventListener('click', () => __awaiter(void 0, void 0, void 0, function* () {
     const products = yield fetchProducts();
     displayProducts(products);
 }));

@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server":"json-server --watch db.json"
+    "server": "json-server --watch db.json"
   },
   "keywords": [],
   "author": "Glen",
@@ -12,5 +12,8 @@
   "description": "PRODUCT MANAGEMENT PROJECT",
   "dependencies": {
     "json-server": "^1.0.0-beta.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.13"
   }
 }

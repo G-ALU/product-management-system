@@ -2,26 +2,24 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: rgb(231, 197, 197);
+    background-color: #f5f5f5;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    font-weight: 600;
-    font-size: 20px;
-    padding: 10px;
+    font-weight: 700;
+    font-size: 24px;
     color: white;
 }
 
 .topbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex end;
     align-items: center;
-    background-color: orange;
-    color: #fff;
-    padding: 10px 20px;
     width: 100%;
+    background-color: #ff7f00;
+    padding: 10px 20px;
 }
 
 nav {
@@ -34,17 +32,21 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
+    margin-left: 65vw;
     gap: 20px;
+   
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: orangered;
+    background-color: white;
+    color: #ff7f00;
     border-radius: 5px;
 }
 
@@ -52,7 +54,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-color: orange;
+    background-color: #ff7f00;
     padding: 10px 20px;
     color: white;
 }
@@ -60,21 +62,24 @@ nav ul li a:hover {
 .searchprod input {
     margin-right: 10px;
     padding: 5px;
-    border: none;
+    border: 2px solid white;
     border-radius: 5px;
+    outline: none;
 }
 
 .searchprod button {
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
-    background-color: orangered;
-    color: white;
+    background-color: white;
+    color: #ff7f00;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .searchprod button:hover {
     background-color: darkred;
+    color: white;
 }
 
 .useroutput {
@@ -90,10 +95,10 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    max-width: 300px;
+    max-width: 250px;
     transition: transform 0.3s;
     text-align: center;
 }
@@ -105,33 +110,98 @@ nav ul li a:hover {
 .userprodname img {
     max-width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .userprodname p {
     margin: 10px 0;
 }
 
-.star {
+
+.activities {
     display: flex;
+    flex-wrap: wrap;
+    gap: 16px; 
     justify-content: center;
-    gap: 5px;
+    padding: 20px; 
 }
 
-#addcart {
+
+.activities1 {
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+    width: 200px; 
+    background-color: #fff; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+
+.activities1:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+
+.activities1 img {
+    width: 100%; 
+    height: auto; 
+    border-bottom: 1px solid #ccc; 
+}
+
+
+.activities1 p {
+    margin: 10px 15px; 
+}
+
+
+.activities1 p strong {
+    display: block; 
+    margin-bottom: 5px; 
+    font-size: 1.2em; 
+}
+
+
+.activities1 p {
+    font-size: 0.9em; 
+    color: #333; 
+}
+
+
+.activities1 button {
+    margin: 10px 15px; 
+    padding: 8px 12px; 
+    background-color: #007bff; 
+    color: #fff; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+
+.activities1 button:hover {
+    background-color: #0056b3;
+}
+
+
+.addcart {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: orange;
+    background-color: #ff7f00;
     color: white;
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 5px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-#addcart:active {
-    background-color: blue;
+.addcart:hover {
+    background-color: #ff5400;
+    transform: scale(1.05);
 }
 
 footer {
@@ -139,7 +209,7 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: orange;
+    background-color: #ff7f00;
     color: white;
     position: fixed;
     width: 100%;
@@ -155,7 +225,7 @@ footer {
     }
 
     .logo {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .userprodname {
@@ -188,7 +258,7 @@ footer {
     }
 
     .logo {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .searchprod {
@@ -203,3 +273,4 @@ footer {
         font-size: 14px;
     }
 }
+

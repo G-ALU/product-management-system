@@ -10,66 +10,31 @@
     <header>
         <nav>
             <div class="topbar">
-            <div class="logo">JUMUIA
-                <ion-icon name="card" style="height: 40px; color: white;"></ion-icon>
-            
-            </div>
-            <ul>
-                <li><a href="landing.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+                <div class="logo">JUMUIA
+                    <ion-icon name="card" style="height: 40px; color: white;"></ion-icon>
+                </div>
+                <ul>
+                    <li><a href="landing.html">Home</a></li>
+                   <li><a href="about.html">About</a></li> 
+                    <li><a href="contact.html">Contact</a></li> 
+                    <li><a href="Checkout.html">Cart</a></li>
+                </ul>
             </div>
         </nav>
     </header>
-               <div class="searchprod">
-                    <label for="search" style="color: white;">Search Product</label><br>
-                    <input type="text" name="search" id="search" placeholder="search product....">
-                    <button id="SearchProd">ENTER</button>
-               </div>
-              
-               <div class="useroutput">
-
-                <div class="userprodname">
-                     <img src="/images/pexels-karolina-grabowska-5942723.jpg" alt="" style="width: 207px;">
-                     <p>Electronics</p>
-                     <p>Price: ksh 13,000</p>
-                     <p>Rating</p>
-                     <div class="star">
-                        <ion-icon name="star" style="color: orangered;"></ion-icon>
-                        <ion-icon name="star" style="color: orangered;"></ion-icon>
-                        <ion-icon name="star" style="color: orangered;"></ion-icon>
-                        <ion-icon name="star" style="color: orangered;"></ion-icon>
-                        <ion-icon name="star" style="color: orangered;"></ion-icon>
-                        
-                    </div><br>
-                     <button id="addcart" ><ion-icon name="cart"></ion-icon>Add to cart</button>
-
-                </div>
-
-                <div class="userprodname">
-                    <img src="/images/pexels-kamenczak-775219.jpg" alt="" style="width: 207px; height: 138px; margin-left:px;">
-                    <p>Furniture</p>
-                    <p>Price: ksh 9,000</p>
-                    <p>Rating</p>
-                    <div class="star">
-                       <ion-icon name="star" style="color: orangered;"></ion-icon>
-                       <ion-icon name="star" style="color: orangered;"></ion-icon>
-                       <ion-icon name="star" style="color: orangered;"></ion-icon>
-                       <ion-icon name="star" style="color: orangered;"></ion-icon>
-                       <ion-icon name="star-outline" style="color:  orangered;"></ion-icon>
-                       
-                   </div><br>
-                    <button id="addcart" ><ion-icon name="cart"></ion-icon>Add to cart</button>
-
-               </div>
-               </div>
-   
+    <div class="searchprod">
+        <label for="search" style="color: white;">Search Product</label><br>
+        <input type="text" name="search" id="search" placeholder="search product....">
+        <button id="SearchProd">ENTER</button>
+    </div>
+    <div class="activities" id="userProducts">
+    </div>
     <footer id="footer">
         <p style="color: orangered">&copy; 2024 JUMUIA</p>
     </footer>
-   
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="/dist/user.js"></script>
 </body>
 </html>
+

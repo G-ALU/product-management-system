@@ -1,16 +1,46 @@
 {
   "products": [
     {
-      "id": "509d",
-      "name": "footwear",
-      "category": "footsteps-outline",
+      "id": "a056",
+      "name": "Furniture",
+      "price": 50999,
+      "description": "good and cool",
+      "imageUrl": "https://images.pexels.com/photos/880876/pexels-photo-880876.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "name": "Footwear",
+      "price": 6700,
+      "description": "not bad",
+      "imageUrl": "https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "id": "8009"
+    },
+    {
+      "id": "aa06",
+      "name": "Eating",
+      "price": 4500,
+      "description": "not good",
+      "imageUrl": "https://images.pexels.com/photos/880876/pexels-photo-880876.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "3016",
+      "name": "Beer",
+      "price": 5000,
+      "description": "Cool breeze",
+      "imageUrl": "https://images.pexels.com/photos/880876/pexels-photo-880876.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "1efd",
+      "name": "Phone",
+      "price": 13000,
+      "description": "Hard",
       "imageUrl": "https://images.pexels.com/photos/609771/pexels-photo-609771.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
-      "name": "Beer",
-      "category": "beer-outline",
-      "imageUrl": "https://images.pexels.com/photos/5055754/pexels-photo-5055754.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "id": "f19b"
+      "id": "8ea6",
+      "name": "phone ",
+      "price": 45678,
+      "description": "Awesomeeeee",
+      "imageUrl": "https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     }
   ]
 }

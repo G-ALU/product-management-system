@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="Cart.css">
+</head>
+<body>
+    <div class="main3">
+        <div class="jumuiatop">
+            <p class="jumuiapay">JUMUIA PAY</p>
+            <ion-icon name="filter-circle" style="color: orange; height: 20px;"></ion-icon></p>
+        </div>
+        <div class="jumuiahelp">
+            <P style="font-size: 30px; margin-left: 100px;"><b>JUMUIA</b></P>
+            <ion-icon name="filter-circle" style="color: orange; width: 50px; height: 40px;"></ion-icon></p>
+            <div class="track"><a href="contact.html" class="button1">Track order</a></div>
+        </div>
+        <div class="businessarea">
+            <div class="cartarea">
+                <div class="cart1"><p>cart </p></div>
+                <div class="cart2" id="cart-items">
+                   
+                </div>
+                <div class="cart3">
+                    <button id="clear-cart"><ion-icon name="trash" style="color: orange; height: 40px; width: 40px; "></ion-icon><br> <p style="font-size: 10px;">REMOVE</p></button>
+                </div>
+            </div>
+            <div class="checkoutarea">
+                <div class="checkoutcartsummary">
+                    <p>Cart Summary</p>
+                </div>
+                <div class="subtotal">
+                    <P>Total</P>
+                    <p id="subtotal">ksh. 0</p>
+                </div>
+                <div class="checkout1">
+                    <button class="checkout">CHECKOUT (ksh. <span id="total-price">0</span>)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/dist/user.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        function loadCartItems() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            const subtotalElement = document.getElementById('subtotal');
+            const totalPriceElement = document.getElementById('total-price');
+
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            cartItemsContainer.innerHTML = '';
+            let subtotal = 0;
+
+            cartItems.forEach((item) => {
+                const itemElement = document.createElement('div');
+                itemElement.classList.add('cart-item');
+                itemElement.innerHTML = `
+                    <p><strong>Name:</strong> ${item.name}</p>
+                    <p><strong>Price:</strong> $${item.price.toFixed(2)}</p>
+                `;
+                cartItemsContainer.appendChild(itemElement);
+                subtotal += item.price;
+            });
+
+            subtotalElement.textContent = `ksh. ${subtotal.toFixed(2)}`;
+            totalPriceElement.textContent = subtotal.toFixed(2);
+        }
+
+        document.getElementById('clear-cart').addEventListener('click', () => {
+            localStorage.removeItem('cart');
+            loadCartItems();
+            alert('Cart has been cleared!');
+        });
+
+        loadCartItems();
+    </script>
+</body>
+</html>

@@ -1,7 +1,8 @@
 interface Product {
     id?: string;
     name: string;
-    category: string;
+    price: number;
+    description: string;
     imageUrl: string;
 }
 
@@ -24,9 +25,11 @@ function displayProducts(products: Product[]): void {
         productItem.classList.add('activities1');
         productItem.innerHTML = `
             <img src="${product.imageUrl}" alt="${product.name}">
-            <p>${product.name}</p><br>
+            <p><strong>Name:</strong> ${product.name}</p>
+            <p><strong>Price:</strong> $${product.price.toFixed(2)}</p>
+            <p><strong>Description:</strong> ${product.description}</p><br>
             <button class="update1" id="update111" data-id="${product.id}" data-action="update">Update</button><br>
-            <button class="update1" id= "delete111" data-id="${product.id}" data-action="delete">Delete </button>
+            <button class="update1" id="delete111" data-id="${product.id}" data-action="delete">Delete</button>
         `;
         activities.appendChild(productItem);
     });
@@ -35,8 +38,6 @@ function displayProducts(products: Product[]): void {
         button.addEventListener('click', handleAction);
     });
 }
-
-
 
 async function handleAction(event: Event): Promise<void> {
     const button = event.target as HTMLButtonElement;
@@ -67,14 +68,14 @@ function showUpdateForm(productId: string): void {
 
 async function updateProduct(productId: string): Promise<void> {
     const productInput = document.getElementById('update-text') as HTMLInputElement;
-    const categoryInput = document.getElementById('update-dropdown') as HTMLSelectElement;
+    const priceInput = document.getElementById('update-price') as HTMLInputElement;
+    const descriptionInput = document.getElementById('update-description') as HTMLTextAreaElement;
     const imageInput = document.getElementById('update-image') as HTMLInputElement;
-    
-    
 
     const updatedProduct: Product = {
         name: productInput.value,
-        category: categoryInput.value,
+        price: parseFloat(priceInput.value),
+        description: descriptionInput.value,
         imageUrl: imageInput.value
     };
 
@@ -87,7 +88,6 @@ async function updateProduct(productId: string): Promise<void> {
     });
 }
 
-
 async function deleteProduct(productId: string): Promise<void> {
     await fetch(`http://localhost:3000/products/${productId}`, {
         method: 'DELETE',
@@ -98,12 +98,14 @@ async function handleSubmit(event: Event): Promise<void> {
     event.preventDefault();
 
     const productInput = document.getElementById('text1') as HTMLInputElement;
-    const categoryInput = document.getElementById('dropdown') as HTMLSelectElement;
+    const priceInput = document.getElementById('price') as HTMLInputElement;
+    const descriptionInput = document.getElementById('description') as HTMLTextAreaElement;
     const imageInput = document.getElementById('image-url') as HTMLInputElement;
 
     const newProduct: Product = {
         name: productInput.value,
-        category: categoryInput.value,
+        price: parseFloat(priceInput.value),
+        description: descriptionInput.value,
         imageUrl: imageInput.value,
     };
 
@@ -120,12 +122,10 @@ async function handleSubmit(event: Event): Promise<void> {
 }
 
 document.getElementById('mySubmit')?.addEventListener('click', handleSubmit);
-
-document.getElementById('mySubmit')?.addEventListener('click', handleSubmit);
 document.getElementById('viewOne')?.addEventListener('click', async () => {
     const criteria = prompt("Enter the product name:") as string;
     const products = await fetchProducts();
-    const filteredProducts = products.filter(product => product.name.includes(criteria) || product.category.includes(criteria));
+    const filteredProducts = products.filter(product => product.name.includes(criteria));
     if (filteredProducts.length > 0) {
         displayProducts([filteredProducts[0]]);
     } else {
@@ -138,6 +138,14 @@ document.getElementById('viewAll')?.addEventListener('click', async () => {
 });
 
 fetchProducts().then(displayProducts);
+
+
+
+
+
+
+
+
 
   
   
